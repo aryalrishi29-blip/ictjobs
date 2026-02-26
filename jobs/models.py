@@ -6,7 +6,7 @@ class Job(models.Model):
     title = models.CharField(max_length=500)
     organization = models.CharField(max_length=255, null=True, blank=True)
     country = models.CharField(max_length=255, null=True, blank=True)
-    closing_date = models.DateTimeField(null=True, blank=True)
+    closing_date = models.DateField(null=True, blank=True)
     url = models.URLField()
     career_categories = models.CharField(max_length=500, null=True, blank=True)  # new field to store categories
 
