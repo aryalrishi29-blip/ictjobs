@@ -126,7 +126,7 @@
         .hero {
             background: var(--surface);
             border-bottom: 1px solid var(--border);
-            padding: 3.5rem 2rem 3rem;
+            padding: 2rem 2rem 1.75rem;
         }
 
         .hero-inner {
@@ -154,17 +154,17 @@
             padding: 4px 12px;
             border-radius: 99px;
             border: 1px solid rgba(26, 107, 74, 0.15);
-            margin-bottom: 1.25rem;
+            margin-bottom: 0.75rem;
         }
 
         h1 {
             font-family: 'Fraunces', serif;
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(1.5rem, 3vw, 2rem);
             font-weight: 700;
             line-height: 1.1;
             letter-spacing: -0.03em;
             color: var(--text);
-            margin-bottom: 0.875rem;
+            margin-bottom: 0.5rem;
         }
 
         h1 em {
@@ -174,11 +174,11 @@
         }
 
         .hero-sub {
-            font-size: 15px;
+            font-size: 13px;
             color: var(--muted);
             font-weight: 300;
             max-width: 460px;
-            line-height: 1.65;
+            line-height: 1.6;
         }
 
         .hero-stats {
@@ -187,13 +187,11 @@
             flex-shrink: 0;
         }
 
-        .stat {
-            text-align: right;
-        }
+        .stat { text-align: right; }
 
         .stat-num {
             font-family: 'Fraunces', serif;
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-weight: 600;
             color: var(--text);
             line-height: 1;
@@ -337,7 +335,6 @@
         .jobs-list {
             display: flex;
             flex-direction: column;
-            gap: 0;
             border: 1.5px solid var(--border);
             border-radius: 14px;
             overflow: hidden;
@@ -375,7 +372,6 @@
         .job-card:nth-child(9)  { animation-delay: 320ms; }
         .job-card:nth-child(10) { animation-delay: 360ms; }
 
-        /* Avatar */
         .org-avatar {
             width: 44px;
             height: 44px;
@@ -392,7 +388,6 @@
             flex-shrink: 0;
         }
 
-        /* Card body */
         .card-body { min-width: 0; }
 
         .card-title-row {
@@ -448,7 +443,6 @@
 
         .meta-item svg { flex-shrink: 0; }
 
-        /* Card right */
         .card-right {
             display: flex;
             flex-direction: column;
@@ -457,14 +451,14 @@
             flex-shrink: 0;
         }
 
-        .closing-date {
+        .closing-info {
             font-size: 11px;
             color: var(--muted);
             white-space: nowrap;
             font-weight: 400;
         }
 
-        .closing-date.urgent {
+        .closing-info.urgent {
             color: var(--accent2);
             font-weight: 500;
         }
@@ -483,8 +477,6 @@
             text-decoration: none;
             transition: all 0.15s;
             white-space: nowrap;
-            border: none;
-            cursor: pointer;
         }
 
         .apply-btn:hover {
@@ -553,17 +545,161 @@
 
         /* ── FOOTER ── */
         footer {
-            border-top: 1px solid var(--border);
-            padding: 1.5rem 2rem;
-            text-align: center;
-            font-size: 12px;
-            color: var(--muted);
             background: var(--surface);
+            border-top: 1px solid var(--border);
             margin-top: 2rem;
         }
 
-        footer a { color: var(--accent); text-decoration: none; font-weight: 500; }
-        footer a:hover { text-decoration: underline; }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            margin-bottom: 4px;
+        }
+
+        .footer-logo-mark {
+            width: 28px;
+            height: 28px;
+            background: var(--accent);
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-weight: 700;
+            font-size: 11px;
+            color: #fff;
+        }
+
+        .footer-logo-text {
+            font-family: 'Fraunces', serif;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text);
+        }
+
+        .footer-logo-text span { color: var(--accent); }
+
+        .footer-desc {
+            font-size: 12px;
+            color: var(--muted);
+            line-height: 1.6;
+            max-width: 340px;
+            font-weight: 300;
+        }
+
+        .footer-sources {
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+
+        .footer-sources a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-sources a:hover { text-decoration: underline; }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 6px;
+        }
+
+        .footer-developer {
+            font-size: 12px;
+            color: var(--muted);
+            text-align: right;
+        }
+
+        .footer-developer strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .footer-developer .built-by {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            justify-content: flex-end;
+            margin-bottom: 4px;
+        }
+
+        .footer-developer .built-by svg {
+            color: var(--accent);
+        }
+
+        .footer-developer .dev-name {
+            font-family: 'Fraunces', serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text);
+            letter-spacing: -0.02em;
+        }
+
+        .footer-divider {
+            border: none;
+            border-top: 1px solid var(--border-soft);
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-copyright {
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .footer-copyright strong { color: var(--text); font-weight: 500; }
+
+        .footer-tech {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tech-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 3px 8px;
+            border-radius: 5px;
+            background: var(--tag-bg);
+            color: var(--muted);
+            border: 1px solid var(--border);
+        }
 
         /* ── RESPONSIVE ── */
         @media (max-width: 700px) {
@@ -572,6 +708,9 @@
             .hero-stats { display: none; }
             h1 { font-size: 1.75rem; }
             .toolbar { top: 56px; }
+            .footer-inner { grid-template-columns: 1fr; }
+            .footer-right { align-items: flex-start; }
+            .footer-developer .built-by { justify-content: flex-start; }
         }
     </style>
 </head>
@@ -598,7 +737,7 @@
     <div class="hero-inner">
         <div class="hero-left">
             <div class="hero-tag">🌍 Humanitarian Sector</div>
-            <h1>Find <em>ICT & Tech</em><br>Jobs that Matter</h1>
+            <h1>Find <em>ICT & Tech</em> Jobs that Matter</h1>
             <p class="hero-sub">Curated technology, data, and information management roles from ReliefWeb — updated daily across the humanitarian sector.</p>
         </div>
         <div class="hero-stats" id="heroStats">
@@ -657,10 +796,8 @@
              data-country="{{ job.country|lower|default:'' }}"
              data-category="{{ job.career_categories|lower|default:'' }}">
 
-            <!-- Avatar -->
             <div class="org-avatar">{{ job.organization|default:"?"|slice:":2"|upper }}</div>
 
-            <!-- Body -->
             <div class="card-body">
                 <div class="card-title-row">
                     <span class="job-title">{{ job.title }}</span>
@@ -689,7 +826,6 @@
                 </div>
             </div>
 
-            <!-- Right -->
             <div class="card-right">
                 <div class="closing-info" id="closing-{{ job.reliefweb_id }}">
                     {% if job.closing_date %}
@@ -710,7 +846,6 @@
         {% endfor %}
     </div>
 
-    <!-- PAGINATION -->
     <nav class="pagination">
         {% if page_obj.has_previous %}
             <a href="?page=1" class="page-btn">«</a>
@@ -751,8 +886,65 @@
 
 </div>
 
+<!-- FOOTER -->
 <footer>
-    Data sourced from <a href="https://reliefweb.int" target="_blank">ReliefWeb</a> via the public API · Jobs updated regularly · Built with Django
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <a href="/" class="footer-logo">
+                <div class="footer-logo-mark">TJ</div>
+                <span class="footer-logo-text">ICT<span>Jobs</span></span>
+            </a>
+            <p class="footer-desc">
+                A curated job board for ICT, data, and technology professionals in the humanitarian sector. Aggregating open roles from ReliefWeb and UN agencies daily.
+            </p>
+            <p class="footer-sources">
+                Data sourced from <a href="https://reliefweb.int" target="_blank">ReliefWeb</a> ·
+                <a href="https://jobs.undp.org" target="_blank">UNDP Jobs</a> ·
+                <a href="https://www.unocha.org" target="_blank">UNOCHA</a>
+            </p>
+        </div>
+
+        <div class="footer-right">
+            <div class="footer-developer">
+                <div class="built-by">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                    </svg>
+                    <span>Designed &amp; Developed by</span>
+                </div>
+                <div class="dev-name">Rishi Aryal</div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+        <div class="footer-copyright">
+            &copy; {% now "Y" %} <strong>Rishi Aryal</strong>. All rights reserved.
+        </div>
+        <div class="footer-tech">
+            <span class="tech-badge">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                </svg>
+                Django
+            </span>
+            <span class="tech-badge">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+                ReliefWeb API
+            </span>
+            <span class="tech-badge">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
+                </svg>
+                SQLite
+            </span>
+        </div>
+    </div>
 </footer>
 
 <script>
@@ -761,14 +953,12 @@
     const categorySet = new Set();
     const orgSet = new Set();
 
-    // Populate filter options from card data
     cards.forEach(card => {
         card.dataset.country.split(',').map(s => s.trim()).filter(Boolean).forEach(c => countrySet.add(c));
         card.dataset.category.split(',').map(s => s.trim()).filter(Boolean).forEach(c => categorySet.add(c));
         if (card.dataset.org) orgSet.add(card.dataset.org.trim());
     });
 
-    // Fill selects
     const countrySelect = document.getElementById('countryFilter');
     const categorySelect = document.getElementById('categoryFilter');
     const pillsContainer = document.getElementById('pillsContainer');
@@ -791,12 +981,10 @@
         pillsContainer.appendChild(pill);
     });
 
-    // Hero stats
     document.getElementById('totalJobs').textContent = cards.length;
     document.getElementById('totalOrgs').textContent = orgSet.size;
     document.getElementById('totalCountries').textContent = countrySet.size;
 
-    // Urgency badges
     const today = new Date(); today.setHours(0,0,0,0);
     cards.forEach(card => {
         const id = card.querySelector('[id^="closing-"]')?.id.replace('closing-','');
@@ -804,7 +992,6 @@
         const closingEl = document.getElementById(`closing-${id}`);
         const urgentEl  = document.getElementById(`urgent-${id}`);
         if (!closingEl || !urgentEl) return;
-
         const text = closingEl.textContent.trim();
         if (text.startsWith('Closes')) {
             const closing = new Date(text.replace('Closes ', ''));
@@ -817,7 +1004,6 @@
         }
     });
 
-    // Filter logic
     let activeCategory = '', activeCountry = '', searchQuery = '';
     const visibleCount = document.getElementById('visibleCount');
 
